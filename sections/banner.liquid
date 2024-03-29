@@ -1,0 +1,125 @@
+<section class="main_banner">
+   <div class="slider-container">
+    <div class="slider">
+
+      {% for block in section.blocks %}
+      <div class="slide active">
+        
+        <video src="{{ block.settings.can-videos.sources[1].url }}" loop autoplay muted></video>
+
+        <!-- slide content -->
+        <div class="slide_content">
+        <div class="container">
+            <div class="ua_banner_text">
+
+                <div class="review_star_txt">
+                    <button class="star_icn">
+                        <i class="fa-solid fa-star"></i>
+                        <b>{{ block.settings.rating }}</b>
+                    </button>
+                    <span class="star_txt">{{ block.settings.can-text }}</span>
+                </div>
+
+                <div class="ua_main_hd">
+                    <h1>{{ block.settings.drink }}</h1>
+                    <p>{{ block.settings.enjoy }}</p>
+                </div>
+
+                <div class="ua_cta">
+                    <span class="shop_now_cta">
+                      <a href="{{ block.settings.btn-url }}">{{ block.settings.shop-btn }}</a>
+                    </span>
+                    <span class="free_shipping">{{ block.settings.free }}</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+         <!-- slide content end-->
+
+        <!-- <div class="slide-name cherry">CHERRY LIMEADE</div> -->
+        <div class="slide-name my{{ forloop.index }} cherry">{{ block.settings.cherry }}</div>
+      </div>
+      {% endfor %}
+      
+     
+    </div>
+    <div class="nav-dots">
+      <span class="dot active" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <!-- Add more dots as needed -->
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Banner Section",
+    "settings": [
+      
+    ],
+    "blocks" : [
+      {
+        "type" : "block",
+        "name" : "banner-block",
+        "settings" : [
+           {
+            "type" : "video",
+            "id" : "can-videos",
+            "label": "Select Banner Video"
+          },
+          {
+            "type" : "text",
+            "id" : "rating",
+            "label" : "Enter Star Rating"
+          },
+          {
+            "type" : "text",
+            "id" : "can-text",
+            "label" : "Enter Banner Sub Title"
+          },
+          {
+            "type" : "text",
+            "id" : "drink",
+            "label" : "Enter Banner Title"
+          },
+          {
+            "type" : "text",
+            "id" : "enjoy",
+            "label" : "Enter Banner Description"
+          },
+          {
+            "type" : "text",
+            "id" : "shop-btn",
+            "label" : "Enter Button Text"
+          },
+          {
+            "type" : "url",
+            "id" : "btn-url",
+            "label" : "Enter Button Url"
+          },
+          {
+            "type" : "text",
+            "id" : "free",
+            "label" : "Enter Shipping Text"
+          },
+
+          {
+            "type" : "text",
+            "id" : "cherry",
+            "label" : "Enter Product Tag"
+          }
+        ]
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Banner Section"
+      }
+    ]
+  }
+{% endschema %}

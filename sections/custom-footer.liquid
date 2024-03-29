@@ -1,0 +1,289 @@
+ <section class="ua_footer">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-5 ua_left_side">
+                    <div class="ua_payment_system">
+                      {% for block in section.blocks %}
+                        {% if block.type == 'payment-img-block' %}
+                          <img src="{{ block.settings.payment-img | img_url : 'master' }}">
+                          <!-- <img src="Images/paypal.png">
+                          <img src="Images/maestro.png">
+                          <img src="Images/mastercard.png">
+                          <img src="Images/visa.png">
+                          <img src="Images/amex.png"> -->
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                    <div class="main-dsicler ">
+                        <!-- <h3>Disclosure</h3>
+                        <p>The statements made regarding these products have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure or prevent any disease. Please consult your health care professional
+                            about potential interactions or possible complications before using any product.</p> -->
+
+                        <h3>{{ section.settings.footer-heading }}</h3>
+                        <p>{{ section.settings.des }}</p>
+
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="footer-right-side ">
+                        <div class="shop-moodstates-section ">
+                            <div class="footer-heading ">
+                                <!-- <h3>SHOP</h3> -->
+                                <!-- <img src="Images/Line.png" alt=" " class="img"> -->
+                                <h3>{{ section.settings.links }}</h3>
+                                <img src="{{ section.settings.dots | img_url : 'master' }}" alt=" " class="img">
+                                <ul>
+                                    <!-- <li><a href="# ">product 1</a></li>
+                                    <li><a href="# ">product 1</a></li>
+                                    <li><a href="# ">product 1</a></li>
+                                    <li><a href="# ">product 1</a></li>
+                                    <li><a href="# ">product 1</a></li> -->
+
+                                  {%- for link in section.settings.menu-link-list.links -%}
+                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                  {% endfor %}
+                                </ul>
+                            </div>
+                             {% for block in section.blocks %}
+                              {% if block.type == 'about-block' %}
+                            <div class="footer-heading ">
+                                <!-- <h3>about</h3>
+                                <img src="Images/Line.png" alt=" " class="img"> -->
+                              <h3>{{ block.settings.name }}</h3>
+                              <img src="{{ block.settings.line-img | img_url : 'master' }}" alt=" " class="img">
+                                <ul>
+                                    <!-- <li><a href="# ">company</a></li>
+                                    <li><a href="# ">SHIPPING POLICY</a></li>
+                                    <li><a href="# ">LAB RESULTS</a></li>
+                                    <li><a href="# ">FAQ</a></li> -->
+
+                                    <li><a href="{{ block.settings.url-one }}">{{ block.settings.company }}</a></li>
+                                    <li><a href="{{ block.settings.url-two }}">{{ block.settings.shipping }}</a></li>
+                                    <li><a href="{{ block.settings.url-three }}">{{ block.settings.lab }}</a></li>
+                                    <li><a href="{{ block.settings.url-four }}">{{ block.settings.faq }}</a></li>
+                                </ul>
+                            </div>
+                                {% endif %}
+                              {% endfor %}
+                            <!-- <div class="footer-heading ">
+                                <h3>about</h3>
+                                <img src="Images/Line.png" alt=" " class="img">
+                                <ul>
+                                    <li>
+                                        <a href="# ">TERM
+                                            S AND CONDITIONS</a>
+                                    </li>
+
+                                    <li><a href="# ">SHIPPING POLICY</a></li>
+
+                                    <li><a href="# ">LAB RESULTS</a></li>
+
+                                    <li>
+                                        <a href="# ">FAQ</a>
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div class="footer-heading content-detail ">
+                                <!-- <h3>CONTACT</h3> -->
+                                <!-- <img src="Images/Line.png" alt=" " class="img"> -->
+                                <h3>{{ section.settings.contacts }}</h3>
+                                <img src="{{ section.settings.line-2 | img_url : 'master' }}" alt=" " class="img">
+                                <ul>
+                                    <!-- <li><a href="mailto:HELLO@MRMOXEYS.COM " class="mail-footer ">HELLO@MRMOXEYS.COM</a></li>
+                                    <li><a href="tel:971.271.7903 ">971.271.7903</a></li>
+                                    <li>PO Box 94292</li>
+                                    <li>Seattle Washington</li>
+                                    <li>98124 United States of America </li> -->
+
+                                    <li><a href="mailto:HELLO@MRMOXEYS.COM " class="mail-footer ">{{ section.settings.mail }}</a></li>
+                                    <li><a href="tel:971.271.7903 ">{{ section.settings.num }}</a></li>
+                                    <li>{{ section.settings.address-one }}</li>
+                                    <li>{{ section.settings.address-two }}n</li>
+                                    <li>{{ section.settings.address-three }}</li>
+
+                                  
+                                    <div class="logos-icon ">
+                                      {% for block in section.blocks %}
+                                        {% if block.type == 'social-icons' %}
+                                          <li>
+                                              <a href="{{ block.settings.icons-url }}"><img src="{{ block.settings.icons-img | img_url : 'master' }}" alt=" " class="logo-footer "></a>
+                                          </li>
+  
+                                          <!-- <li>
+                                              <a href="#"><img src="Images/instagram.png" alt=" " class="logo-footer "></a>
+                                          </li> -->
+                                        {% endif %}
+                                      {% endfor %}
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+
+
+{% schema %}
+  {
+    "name": "Custom Footer Section",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "footer-heading",
+        "label" : "Enter Heading"
+      },
+      {
+        "type" : "text",
+        "id" : "des",
+        "label" : "Enter Description"
+      },
+      {
+        "type" : "text",
+        "id" : "links",
+        "label" : "Enter  menu Heading"
+      },
+      {
+        "type" : "image_picker",
+        "id" : "dots",
+        "label" : "Select Line Image"
+      },
+      {
+        "type" : "link_list",
+        "id"   : "menu-link-list",
+        "label": "Select Menu List"
+      },
+      {
+        "type" : "text",
+        "id" : "contacts",
+        "label" : "Enter Heading"
+      },
+      {
+        "type" : "image_picker",
+        "id" : "line-2",
+        "label" : "Select image"
+      },
+
+
+
+      {
+        "type" : "text",
+        "id" : "mail",
+        "label" : "Enter Mail Address"
+      },
+      {
+        "type" : "text",
+        "id" : "num",
+        "label" : "Enter Number"
+      },
+      {
+        "type" : "text",
+        "id" : "address-one",
+        "label" : "Enter Address Heading"
+      },
+      {
+        "type" : "text",
+        "id" : "address-two",
+        "label" : "Enter Address Heading"
+      },
+      {
+        "type" : "text",
+        "id" : "address-three",
+        "label" : "Enter Address Heading"
+      }
+    ],
+    "blocks" : [
+      {
+        "type" : "payment-img-block",
+        "name" : "payment-img-block",
+        "settings" : [
+          {
+            "type" : "image_picker",
+            "id" : "payment-img",
+            "label" : "Select Payment Image"
+          }
+        ]
+      },
+      {
+        "type" : "about-block",
+        "name" : "about-block",
+        "settings" : [
+          {
+            "type" : "text",
+            "id" : "name",
+            "label" : "Enter Heading Text"
+          },
+          {
+            "type" : "image_picker",
+            "id" : "line-img",
+            "label" : "Select Line Image"
+          },
+
+          {
+            "type" : "text",
+            "id" : "company",
+            "label" : "Enter Sub Heading"
+          },
+          {
+            "type" : "url",
+            "id" : "url-one",
+            "label" : "Enter Sub Heading"
+          },
+          {
+            "type" : "text",
+            "id" : "shipping",
+            "label" : "Enter Sub Heading"
+          },
+          {
+            "type" : "url",
+            "id" : "url-two",
+            "label" : "Enter Sub Heading"
+          },
+          {
+            "type" : "text",
+            "id" : "lab",
+            "label" : "Enter Sub Heading"
+          },
+          {
+            "type" : "url",
+            "id" : "url-three",
+            "label" : "Enter Sub Heading"
+          },
+          {
+            "type" : "text",
+            "id" : "faq",
+            "label" : "Enter Sub Heading"
+          },
+          {
+            "type" : "url",
+            "id" : "url-four",
+            "label" : "Enter Sub Heading"
+          }
+        ]
+      },
+      {
+        "type": "social-icons",
+        "name" : "social-icons",
+        "settings" : [
+          {
+            "type" : "image_picker",
+            "id" : "icons-img",
+            "label" : "Select Social Icons Images"
+          },
+          {
+            "type" : "url",
+            "id" : "icons-url",
+            "label" : "Enter Social Icons Images Url"
+          }
+        ]
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Custom Footer Section"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,140 @@
+<section class="favourite_section">
+    <div class="sub-title-text">
+        <h6>{{ section.settings.sub-text }}</h6>
+    </div>
+    <div class="heading-text">
+        <h2>{{ section.settings.heading-text }}</h2>
+    </div>
+    <div class="container">
+        <div class="row free_del" >
+
+            <div class="col-lg-4 satisfac_col first_last_eql">
+                <div class="staisfaction_icn">
+                    <img src="{{ section.settings.satish-img-one | img_url : 'master' }}" alt="staisfaction_icon">
+                </div>
+
+                <div class="free_delivery_wrapper">
+                    <h6>{{ section.settings.free-del-one }}</h6>
+                    <p>{{ section.settings.lorem-one }}</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 satisfac_col">
+                <div class="staisfaction_icn">
+                    <img src="{{ section.settings.satish-img-two | img_url : 'master' }}" alt="staisfaction_icon">
+                </div>
+
+                <div class="free_delivery_wrapper">
+                    <h6>{{ section.settings.free-del-two }}</h6>
+                    <p>{{ section.settings.lorem-two }}</p>
+
+                </div>
+
+                <div class="baloon_wrapper">
+                    <img src="{{ section.settings.baloon-img | img_url : 'master' }}" alt="baloon">
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 satisfac_col first_last_eql">
+                <div class="staisfaction_icn">
+                    <img src="{{ section.settings.satish-img-three | img_url : 'master' }}" alt="staisfaction_icon">
+                </div>
+
+                <div class="free_delivery_wrapper">
+                    <h6>{{ section.settings.free-del-three }}</h6>
+                    <p>{{ section.settings.lorem-three }}</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+{% schema %}
+  {
+    "name": "Favourite Section",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "sub-text",
+        "label" : "Enter Sub Title"
+      },
+      {
+        "type" : "text",
+        "id" : "heading-text",
+        "label" : "Enter Title"
+      },
+      {
+        "type" : "image_picker",
+        "id" : "satish-img-one",
+        "label" : "Select Image"
+      },
+      {
+        "type" : "text",
+        "id" : "free-del-one",
+        "label" : "Enter Text"
+      },
+      {
+        "type" : "text",
+        "id" : "lorem-one",
+        "label" : "Enter Text"
+      },
+      {
+        "type" : "image_picker",
+        "id" : "satish-img-two",
+        "label" : "Select Image"
+      },
+      {
+        "type" : "text",
+        "id" : "free-del-two",
+        "label" : "Enter Text"
+      },
+      {
+        "type" : "text",
+        "id" : "lorem-two",
+        "label" : "Enter Text"
+      },
+      {
+        "type" : "image_picker",
+        "id" : "baloon-img",
+        "label" : "Select Image"
+      },
+
+
+
+      {
+        "type" : "image_picker",
+        "id" : "satish-img-three",
+        "label" : "Select Image"
+      },
+      {
+        "type" : "text",
+        "id" : "free-del-three",
+        "label" : "Enter Text"
+      },
+      {
+        "type" : "text",
+        "id" : "lorem-three",
+        "label" : "Enter Text"
+      }
+
+
+
+      
+    ],
+    "presets" : [
+      {
+        "name" : "Favourite Section"
+      }
+    ]
+  }
+{% endschema %}

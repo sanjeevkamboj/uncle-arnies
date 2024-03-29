@@ -1,0 +1,218 @@
+<section class="reasons_to_believe">
+        <div class="container">
+            <div class="reason_beileve_main_wrapper">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="sub-title-text">
+                            <h6>{{ section.settings.sub-title }}</h6>
+                        </div>
+                        <div class="heading-text">
+                            <h2>{{ section.settings.title }}</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 cta_col">
+                        <div class="shop_cta">
+                            <span class="shop_now_cta">
+                            <!-- <a href="#">shop now</a> -->
+                              <a href="{{ section.settings.btn-url }}">{{ section.settings.shop-title }}</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- accordians  -->
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="accordin_block_wrapper">
+                            <div class="accordion" id="accordionExample">
+
+                              {% for block in section.blocks %}
+                                <div class="accordion-item tab{{ forloop.index }}">
+                                    <h2 class="accordion-header" id="headingOne{{ forloop.index }}">
+                                      <button class="accordion-button {% if forloop.index0 == 0 %}one{% else %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ forloop.index }}" aria-expanded="true" aria-controls="collapseOne">
+                                        <img src="{{ block.settings.accordian-img | img_url : 'master' }}">
+                                        {{ block.settings.acco-question }}
+                                       </button>
+                                    </h2>
+                                    <div id="collapseOne{{ forloop.index }}" class="accordion-collapse collapse {% if forloop.index0 == 0 %}show{% endif %}" aria-labelledby="headingOne{{ forloop.index }}" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>{{ block.settings.acco-ans }}</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                {% endfor %}
+                                <!-- <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                     <img src="Images/NANOMOLECULAR_ICON.svg">
+                                     NANOMOLECULAR
+                                     </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>Uncle Arnies takes you on an easy-drinking trip with every sip of our fruity THC-infused beverages. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                     <img src="Images/QUICK_ONSET.svg">
+                                     SUGAR FREE
+                                     </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>Uncle Arnies takes you on an easy-drinking trip with every sip of our fruity THC-infused beverages. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                     <img src="Images/VEGAN_ICON.svg">
+                                     VEGAN
+                                     </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>Uncle Arnies takes you on an easy-drinking trip with every sip of our fruity THC-infused beverages. </p>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 accor_img_block">
+                       {% for block in section.blocks %}
+                        <div class="accordian_block_img firstacc{{ forloop.index }} {% if forloop.first %}open{% endif %}">
+                            <!-- <img src="Images/felr.png"> -->
+                            <img src="{{ block.settings.right | img_url : 'master' }}">
+                        </div>
+                                {% endfor %}
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script>
+$(document).ready(function(){
+$(".accordion-item.tab1").click(function(){
+  $(".firstacc1").addClass("open");
+  $('.firstacc2').removeClass("open");
+   $('.firstacc3').removeClass("open");
+   $('.firstacc4').removeClass("open");
+  
+
+});
+ $(".accordion-item.tab2").click(function(){
+  $(".firstacc2").addClass("open");
+     $('.firstacc1').removeClass("open");
+   $('.firstacc3').removeClass("open");
+   $('.firstacc4').removeClass("open");
+});   
+     $(".accordion-item.tab3").click(function(){
+  $(".firstacc3").addClass("open");
+            $('.firstacc1').removeClass("open");
+   $('.firstacc2').removeClass("open");
+   $('.firstacc4').removeClass("open");
+}); 
+         $(".accordion-item.tab4").click(function(){
+  $(".firstacc4").addClass("open");
+      $('.firstacc1').removeClass("open");
+   $('.firstacc2').removeClass("open");
+   $('.firstacc3').removeClass("open");
+}); 
+});
+</script>
+<style>
+.firstacc1{
+  display:none;
+}
+    .firstacc1.open{
+    display:block !important;
+  }
+  .firstacc2{
+    display:none;
+  }
+   .firstacc2.open{
+    display:block !important;
+  }
+  .firstacc3{
+    display:none;
+  }
+   .firstacc3.open{
+    display:block !important;
+  }
+.firstacc4{
+    display:none;
+  }
+     .firstacc4.open{
+    display:block !important;
+  }
+
+</style>
+{% schema %}
+  {
+    "name": "Reasoning Section",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "sub-title",
+        "label" : "Enter Sub Title"
+      },
+      {
+        "type" : "text",
+        "id" : "title",
+        "label" : "Enter Title"
+      },
+      {
+        "type" : "text",
+        "id" : "shop-title",
+        "label" : "Enter Button Text"
+      },
+      {
+        "type" : "url",
+        "id" : "btn-url",
+        "label" : "Enter Button Url"
+      }
+   
+    ],
+    "blocks" : [
+      {
+        "type" : "block",
+        "name" : "accordian-block",
+        "settings" : [
+          {
+            "type" : "image_picker",
+            "id" : "accordian-img",
+            "label" : "Select Image"
+          },
+          {
+            "type" : "text",
+            "id" : "acco-question",
+            "label" : "Enter Accordian Question"
+          },
+          {
+            "type" : "textarea",
+            "id" : "acco-ans",
+            "label" : "Enter Accordion Answer"
+          },
+             {
+            "type" : "image_picker",
+            "id" : "right",
+            "label" : "Select Image"
+          }
+          
+        
+        ]
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Reasoning Section"
+      }
+    ]
+  }
+{% endschema %}

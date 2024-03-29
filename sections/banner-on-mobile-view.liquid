@@ -1,0 +1,156 @@
+<section class="banner_mob_section">
+    <div class="container">
+        <div class="review_star_txt">
+            <div class="star_icn_main">
+            <button class="star_icn">
+                <i class="fa-solid fa-star"></i>
+                <!-- <b>4.8</b> -->
+                <b>{{ section.settings.rate-num }}</b>
+            </button>
+        </div>
+            <div class="star_txt_main">
+            <!-- <span class="star_txt">MORE THAN 10K CANS SOLD</span> -->
+            <span class="star_txt">{{ section.settings.sub }}</span>
+            </div>
+
+            <div class="ua_main_hd">
+                    <!-- <h1>drinkable FRUITY THC tripS</h1> -->
+              <h1>{{ section.settings.headings }}</h1>
+            </div>
+
+            <div class="mob_pro_carousel">
+                <div class="owl-carousel owl-theme banner_mob">
+
+                  {% for block in section.blocks %}
+                    <div class="item">
+                        <div class="mob_can_wrapper">
+                            <!-- <img src="https://cdn.shopify.com/s/files/1/0583/8189/3711/files/mob_can.png?v=1711171988" alt="mob_can"> -->
+                            <img src="{{ block.settings.baner-img | img_url : 'master' }}" alt="mob_can">
+                        </div>
+                    </div>
+                  {% endfor %}
+
+                  <!-- <div class="item">
+                        <div class="mob_can_wrapper">
+                            <img src="https://cdn.shopify.com/s/files/1/0583/8189/3711/files/mob_can.png?v=1711171988" alt="mob_can">
+                        </div>
+                    </div>
+
+                  <div class="item">
+                        <div class="mob_can_wrapper">
+                            <img src="https://cdn.shopify.com/s/files/1/0583/8189/3711/files/mob_can.png?v=1711171988" alt="mob_can">
+                        </div>
+                    </div>
+
+                  <div class="item">
+                        <div class="mob_can_wrapper">
+                            <img src="https://cdn.shopify.com/s/files/1/0583/8189/3711/files/mob_can.png?v=1711171988" alt="mob_can">
+                        </div>
+                    </div> -->
+
+                  
+                </div>
+            </div>
+
+            <div class="ua_main_desc">
+                <!-- <p>Enjoy familiar yet thrilling flavors, and let the subtle warmth of THC elevate the moments that matter into experiences that linger. Let Uncle Arnie take you to a communal journey!</p> -->
+                <p>{{ section.settings.desc }}</p>
+            </div>
+
+            <div class="ua_cta">
+                <span class="shop_now_cta">
+                  <a href="{{ section.settings.btn-url }}">{{ section.settings.btns }}</a>
+                </span>
+                <!-- <span class="free_shipping">Free Shipping on Orders Over $50</span> -->
+                <span class="free_shipping">{{ section.settings.free-shipping }}</span>
+            </div>
+
+
+        </div>
+    </div>
+  
+</section>
+
+
+{% schema %}
+  {
+    "name": "Banner For Mobile View",
+    "settings": [
+      {
+        "type": "text",
+        "id": "rate-num",
+        "label": "Enter Product Rating"
+      },
+      {
+        "type": "text",
+        "id": "sub",
+        "label": "Enter Sub Heading"
+      },
+      {
+        "type": "text",
+        "id": "headings",
+        "label": "Enter Sub Heading"
+      },
+      {
+        "type": "text",
+        "id": "desc",
+        "label": "Enter Description"
+      },
+      {
+        "type": "text",
+        "id": "btns",
+        "label": "Enter Button"
+      },
+      {
+        "type": "url",
+        "id": "btn-url",
+        "label": "Enter Button Url"
+      },
+      {
+        "type": "text",
+        "id": "free-shipping",
+        "label": "Enter Free Shipping Text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "banner-img",
+        "name": "banner-img",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "baner-img",
+            "label": "Select Images"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner For Mobile View"
+      }
+    ]
+  }
+{% endschema %}
+
+
+
+<script>
+    $('.banner_mob').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+</script>

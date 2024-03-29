@@ -1,0 +1,63 @@
+<section class="main page-width">
+  <div class="nav-col">
+ <div class="nav-id">
+      <div class="main-nav-col-slider">
+      <div class="owl-carousel owl-theme collection_slider owl-loaded owl-drag">
+ 
+      <div class="owl-stage-outer">
+        <div class="owl-stage" style="transform: translate3d(-1110px, 0px, 0px); transition: all 0s ease 0s; width: 3552px;">
+        <div class="owl-item active" style="width: 212px; margin-right: 10px;"><div class="coll-info {% if collection.title =="ALL" %} active {% endif %}">
+          <a href="/collections/all" class="clickPage collection-link" data-collection="all">
+            <img src="//4c21aa-4b.myshopify.com/cdn/shop/collections/iced_tea_6ac53c39-75b4-40c2-8a33-709178596e11_medium.png?v=1711517400">
+            <h3 class="col-title">ALL</h3>
+          </a>
+        </div></div><div class="owl-item active" style="width: 212px; margin-right: 10px;"><div class="coll-info {% if collection.title =="Bottles" %} active {% endif %}">
+          <a href="/collections/bottles" class="clickPage collection-link" data-collection="bottles">
+            <img src="//4c21aa-4b.myshopify.com/cdn/shop/collections/iced_tea_medium.png?v=1711448869">
+            <h3 class="col-title">Bottles</h3>
+          </a>
+        </div></div><div class="owl-item active" style="width: 212px; margin-right: 10px;"><div class="coll-info {% if collection.title =="Bundles" %} active {% endif %}">
+          <a href="/collections/bundles" class="clickPage collection-link" data-collection="bundles">
+            <img src="//4c21aa-4b.myshopify.com/cdn/shop/collections/iced_tea_35bc51c8-b612-4931-a229-d1487e172fab_medium.png?v=1711448949">
+            <h3 class="col-title">Bundles</h3>
+          </a>
+        </div></div><div class="owl-item active" style="width: 212px; margin-right: 10px;"><div class="coll-info {% if collection.title =="Cans" %} active {% endif %}">
+          <a href="/collections/cans" class="clickPage collection-link" data-collection="cans">
+            <img src="//4c21aa-4b.myshopify.com/cdn/shop/collections/cherry_lime_medium.png?v=1711436786">
+            <h3 class="col-title">Cans</h3>
+          </a>
+        </div></div><div class="owl-item active" style="width: 212px; margin-right: 10px;"><div class="coll-info {% if collection.title =="MERCH" %} active {% endif %}">
+          <a href="/collections/merch" class="clickPage collection-link" data-collection="merch">
+            <img src="//4c21aa-4b.myshopify.com/cdn/shop/collections/iced_tea_847e393b-2b0a-40dd-b2ef-6301f0ac2c2e_medium.png?v=1711517358">
+            <h3 class="col-title">MERCH</h3>
+          </a>
+        </div></div><div class="owl-item" style="width: 212px; margin-right: 10px;"><div class="coll-info {% if collection.title =="Shots" %} active {% endif %}">
+          <a href="/collections/shots" class="clickPage collection-link" data-collection="shots">
+            <img src="//4c21aa-4b.myshopify.com/cdn/shop/collections/iced_tea_e3751ba3-eede-4bde-8484-1f1e4d361782_medium.png?v=1711448911">
+            <h3 class="col-title">Shots</h3>
+          </a>
+        </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+      </div>
+    </div>
+    {% render 'breadcrumb' %}
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Collection Slider Section",
+    "settings": [
+      {
+        "type": "collection_list",
+        "id" : "coll-list",
+        "label": "Select Collections List"
+      }
+    ],
+    "presets": [
+      {
+        "name" : "Collection Slider Section"
+      }
+    ]
+  }
+{% endschema %}

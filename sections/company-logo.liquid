@@ -1,0 +1,50 @@
+  <section class="as_seen_sec">
+    <div class="container">
+        <div class="as_seen_main">
+          <div class="as_seen_inner">
+            <!-- <h6>As seen on</h6> -->
+            <h6>{{ section.settings.text }}</h6>
+          </div>
+          {% for block in section.blocks %}
+            <div class="as_seen_inner">
+              <img src="{{ block.settings.company-logo | img_url : 'master' }}" alt="forbes">
+            </div>
+          {% endfor %}
+
+        </div>
+    </div>
+
+   </section>
+
+
+{% schema %}
+  {
+    "name": "Company Logo Section",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "text",
+        "label" : "Enter Heading"
+      }
+    ],
+    "blocks" : [
+      {
+        "type" : "block",
+        "name" : "image-block",
+        "settings" : [
+          {
+            "type" : "image_picker",
+            "id" : "company-logo",
+            "label" : "Select Company Logo Image"
+          }
+        ]
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Company Logo Section"
+      }
+    ]
+  }
+{% endschema %}
+

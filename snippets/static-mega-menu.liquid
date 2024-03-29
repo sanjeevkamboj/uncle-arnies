@@ -1,0 +1,25 @@
+{% comment %} <div class="promo_wrapper">
+  <div class="promo_wrappper_inner">
+    <img src="https://cdn.shopify.com/s/files/1/0583/8189/3711/files/promo_prcdt.png?v=1711435811" alt="promo_img">
+    <div class="promo_text">
+    <h6>GET THE PROMO</h6>
+    <h2>BOGO</h2>
+    <h6>FOR A LIMITED TIME</h6> 
+    </div>
+  </div>
+  
+</div> {% endcomment %}
+
+
+
+<div class="promo_wrapper">
+  <div class="promo_wrappper_inner">
+    <img src="{{ settings.promo-img | img_url : 'master' }}" alt="promo_img">
+    <div class="promo_text">
+    <h6>{{ settings.text-one }}</h6>
+    <h2>{{ settings.title }}</h2>
+    <h6>{{ settings.text-two }}</h6> 
+    </div>
+  </div>
+  
+</div>

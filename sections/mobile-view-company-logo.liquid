@@ -1,0 +1,77 @@
+ <section class="as_seen_mob_sec">
+   <div class="as_seen_hd">
+     <!-- <h6>As seen on</h6> -->
+     <h6>{{ section.settings.mob-heading }}</h6>
+     <div class="comp_logo_main">
+       <div class="owl-carousel owl-theme comp_logo">
+        
+              
+                {% for block in section.blocks %}
+                    <div class="item">
+                  <div class="comp_logo_wrapper">
+                <!-- <img src="https://cdn.shopify.com/s/files/1/0583/8189/3711/files/forbes.png?v=1710911460" alt="comp_logo"> -->
+                  <img src="{{ block.settings.img-view | img_url : 'master' }}" alt="comp_logo">
+                  </div>
+                   </div>
+                {% endfor %}
+              
+         
+      </div>
+       
+     </div>
+   </div>
+   
+ </section>
+
+
+
+
+{% schema %}
+  {
+    "name": "Image Mobile View Section",
+    "settings": [
+      {
+        "type": "text",
+        "id" : "mob-heading",
+        "label": "Enter Heading For Mobile View"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "img-block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id" : "img-view",
+            "label": "Select Image For Mobile View"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name" : "Image Mobile View Section"
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+    $('.comp_logo').owlCarousel({
+    loop:true,
+    margin:40,
+    nav:true,
+    responsive:{
+        0:{
+            items:3.8
+        },
+        600:{
+            items:3.8
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+</script>

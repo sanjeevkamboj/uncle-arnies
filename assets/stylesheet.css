@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondensedBold.woff2?v=1710847711') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondensedBold.woff?v=1710847691') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondExtraBoldObl.woff2?v=1710847668') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondExtraBoldObl.woff?v=1710847645') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-BookOblique.woff2?v=1710847623') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-BookOblique.woff?v=1710847602') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-ExtraBold.woff2?v=1710847572') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-ExtraBold.woff?v=1710847549') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-ExtraBoldOblique.woff2?v=1710847525') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-ExtraBoldOblique.woff?v=1710847502') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-Book.woff2?v=1710847476') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-Book.woff?v=1710847453') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondensedExtraBd.woff2?v=1710847427') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondensedExtraBd.woff?v=1710847383') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-BoldOblique.woff2?v=1710847328') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-BoldOblique.woff?v=1710847305') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-HeavyOblique.woff2?v=1710847277') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-HeavyOblique.woff?v=1710847251') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-Heavy.woff2?v=1710847224') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-Heavy.woff?v=1710847200') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-Bold.woff2?v=1710847170') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-Bold_5b718df4-5a47-44f0-9919-f27ab21b8a21.woff?v=1710847145') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondensedBoldObl.woff2?v=1710846966') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondensedBoldObl.woff?v=1710846943') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondensedLightObl.woff2?v=1710846910') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondensedLightObl.woff?v=1710846881') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-LightOblique.woff2?v=1710846851') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-LightOblique.woff?v=1710846829') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondensedLight.woff2?v=1710846800') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondensedLight.woff?v=1710846773') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-Light.woff2?v=1710846656') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-Light.woff?v=1710846618') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-Condensed.woff2?v=1710846579') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-Condensed.woff?v=1710846549') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondensedOblique.woff2?v=1710846512') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-CondensedOblique.woff?v=1710846484') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-Medium.woff2?v=1710846445') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-Medium.woff?v=1710846412') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-MediumOblique.woff2?v=1710846373') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/FuturaStd-MediumOblique.woff?v=1710846341') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Keep on Truckin';
+    src: url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/KeeponTruckin.woff2?v=1710846268') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0687/5349/0178/files/KeeponTruckin.woff?v=1710845970') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+

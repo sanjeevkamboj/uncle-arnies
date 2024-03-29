@@ -1,0 +1,714 @@
+
+
+/* header css */
+
+a#HeaderMenu-about {
+    display: none;
+}
+a#HeaderMenu-blog {
+    display: none;
+}
+
+a#HeaderMenu-wholesale {
+    display: none;
+}
+.reasons-to-believes-sec img.mobile-view {
+    display: none;
+}
+/* header css end */
+
+@media (max-width:1024px) {
+   section.main_banner .slide_content .ua_banner_text .ua_main_hd h1 {
+    font-size: 40px;
+    line-height: 60px;
+}
+   section.main_banner .slide_content .ua_banner_text {
+    width: 50%;
+}
+  section.as_seen_sec {
+    margin-top: -109px!important;
+}
+
+   .as_seen_inner h6 {
+    font-size: 16px!important;;
+}
+
+  .review_slide .owl-nav button {
+    bottom: 78px!important;
+}
+
+  .heading-text h2 {
+    font-size: 40px;
+    line-height: 60px;
+    
+}
+  section.product-section .product_item_main .product_review_price_wrapper {
+    width: 100%;
+}
+   section.product-section .product_item_main .product_review_price_wrapper .product_review {
+    gap: 0px;
+}
+section.product-section .product_item_main .product_title h4 {
+    font-size: 20px;
+}
+
+.ss-heading-text h1 {
+    font-size: 40px;
+    line-height: 60px;
+}
+
+   .sipping-success-sec {
+    padding: 60px 0px 60px;
+     overflow:hidden;
+}
+
+.sb-heading-text h1 {
+    font-size: 40px;
+    line-height: 60px;
+}
+
+  section.ua_footer .shop-moodstates-section {
+    padding-left: 0px;
+}
+
+section.ua_footer .footer-heading ul li a {
+    font-size: 10px;
+}  
+
+section.as_seen_sec .as_seen_main {
+    bottom: -21px!important;
+}
+ }
+
+@media (max-width:991px) {
+
+  .high-there-section .col-lg-7 {
+    width: 100%!important;
+}
+.menu-drawer {
+    background: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(212,32,42,1) 100%);
+}
+
+div#menu-drawer nav.menu-drawer__navigation ul.menu-drawer__menu.has-submenu.list-menu summary, div#menu-drawer nav.menu-drawer__navigation ul.menu-drawer__menu.has-submenu.list-menu a {
+    color: var(--white);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0.8px;
+    font-family: "Futura Std";
+    text-transform: uppercase;
+}
+
+div#menu-drawer .menu-drawer__account {
+    color:var(--white);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: .8px;
+    font-family: Futura Std;
+    text-transform: uppercase;
+}
+
+
+div#menu-drawer .no-js details[open]>.menu-drawer, .js details[open].menu-opening>.menu-drawer, details[open].menu-opening>.menu-drawer__submenu {
+    background: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(212,32,42,1) 100%);
+}
+
+div#menu-drawer button.menu-drawer__close-button.link.link--text.focus-inset {
+    color: var(--white);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0.8px;
+    font-family: "Futura Std";
+}
+
+details#Details-menu-drawer-container svg.icon.icon-close path {
+    fill: #fff;
+}
+  
+a#HeaderMenu-about {
+    display: block;
+}
+a#HeaderMenu-blog {
+    display: block;
+}
+  
+  .my-menus {
+    display: none;
+}
+   .as_seen_inner h6 {
+    font-size: 14px;
+}
+
+  section.as_seen_sec .as_seen_main {
+    width: 100%;
+    gap:10px;
+}
+
+  section.as_seen_sec {
+    display: none;
+}
+
+  section.banner_mob_section {
+    display: block;
+}
+
+  section.main_banner {
+    display: none;
+}
+  section.as_seen_mob_sec {
+    display: block;
+}
+
+section.banner_mob_section .ua_cta span.shop_now_cta, section.banner_mob_section .ua_cta span.free_shipping {
+    display: block;
+}
+  section.banner_mob_section .ua_main_hd h1 {
+    font-size: 40px;
+}
+
+  section.banner_mob_section .star_txt_main span.star_txt {
+    font-size: 20px;
+}
+
+  section.banner_mob_section .star_txt_main {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+section.banner_mob_section .mob_can_wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+  section.banner_mob_section .mob_can_wrapper img {
+    width: 75%;
+}
+
+section.banner_mob_section .ua_main_desc p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+  section.as_seen_mob_sec .as_seen_hd h6 {
+    font-size: 28px;
+}
+
+.high-there-section .wht_btn_col {
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.high-there-section .quick-on-set-section .quick-set-box {
+    margin: 0 0 15px!important;
+    text-align: center;
+}
+
+.high-there-section .quick-on-set-section .quick-set-box span {
+    display: inline-block;
+    width: 100%;
+    padding:30px;
+}
+
+section.favourite_section .satisfac_col {
+    margin-top: 20px;
+}
+section.reasons_to_believe .reason_beileve_main_wrapper {
+    padding: 44px 44px;
+}
+  .sb-heading {
+    margin-bottom: 0px;
+}
+
+  .reasons-to-believes-sec {
+    padding: 60px 0px 180px;
+}
+
+.contact-form-inner {
+    width: 100%;
+}
+
+  .reasons-to-believes-sec .new-one {
+    margin-bottom: 40px;
+}
+  .footer-bottom {
+    height: 220px;
+}
+
+.footer-bottom {
+    height: 220px;
+}
+
+.main-footer-section {
+    padding: 49px 61px 0 62px;
+}
+
+  .contact-form-box {
+    margin-top: -180px;
+}
+
+section.ua_footer .col-md-5.ua_left_side {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+section.ua_footer .col-md-7 {
+    width: 100%;
+}
+
+/* collection page css */
+  body.collection-page .main-footer-section {
+    padding: 255px 61px 0 62px!important;
+}
+
+body.collection-page main#MainContent div#ProductGridContainer .collection.page-width ul#product-grid {
+    row-gap: 60px!important;
+}
+
+/* collection page css end */
+ }
+
+
+@media (max-width:767px) {
+
+section.banner_mob_section .container {
+    max-width: 100%!important;
+}
+  
+  section.banner_mob_section .star_txt_main span.star_txt {
+    font-size: 12px!important;
+}
+
+  section.banner_mob_section .ua_main_hd h1 {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing:-2px;
+}
+
+section.banner_mob_section .ua_main_desc p {
+    font-size: 14px!important;
+    margin-bottom: 12px!important;
+    width: 96%;
+    margin: 0 auto;
+}
+
+section.banner_mob_section .star_txt_main {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+section.banner_mob_section .mob_can_wrapper img {
+    width: 100%;
+}
+section.banner_mob_section .owl-dots button.owl-dot {
+    padding: 3px!important;
+}
+
+  section.as_seen_mob_sec .as_seen_hd h6 {
+    font-size: 16px;
+}
+
+  section.review_sec {
+    padding: 20px 0px 50px 0px!important;
+}
+
+  .heading-text h2 {
+         font-size: 26px;
+         line-height: 40px;
+         text-align: center;
+        -webkit-text-stroke-width: 2px;
+    }
+
+  .high-there-section  .uncle_img {
+    text-align:center!important;
+    margin-top: 80px;
+}
+
+.high-there-section .uncle_img img {
+    width: 317px!important;
+    height: 317px!important;
+    object-fit: contain;
+}
+
+.high-there-section .wht_btn_col {
+    display: block;
+}
+
+  .high-there-section .quick-on-set-section .quick-set-box span {
+    padding: 15px;
+}
+
+  section.product-section .product_item_main .product_review_price_wrapper {
+    width: 75%;
+}
+
+  section.product-section .owl-nav {
+    display: none;
+}
+
+section.product-section .owl-dots {
+    display: none;
+}
+
+section.favourite_section .free_del {
+    margin-top: 0px;
+}
+
+section.favourite_section .free_delivery_wrapper {
+    width: 100%;
+    margin-left: 20px;
+    padding: 15px 15px 5px 15px!important;
+}
+
+section.favourite_section {
+    padding: 40px 0 700px!important;
+    position: relative;
+    background: url("https://cdn.shopify.com/s/files/1/0583/8189/3711/files/balloon_bg_mob.png?v=1711541121")!important;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+    background-position: bottom!important;
+}
+
+section.favourite_section .satisfac_col .baloon_wrapper {
+    margin-top: 0px;
+    position: absolute;
+    bottom: 150px;
+    left: 110px;
+}
+
+section.reasons_to_believe .container {
+    padding: 0px;
+}
+
+section.reasons_to_believe .reason_beileve_main_wrapper {
+    padding: 40px 20px;
+}
+
+  .sub-title-text h6 {
+    font-size: 12px;
+}
+
+.Stories-review-main {
+    width: 100%;
+}
+
+.sipping-success-sec .ss-title-text h6 {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+  .ss-heading-text h1 {
+    font-size: 28px;
+    line-height: 40px;
+    -webkit-text-stroke: 2px black;
+    letter-spacing:2px;
+    text-align:center;
+}
+.sipping-success-sec {
+    padding: 60px 0px!important;
+}
+
+.sipping-success-sec .shop_cta {
+    display: block;
+}
+
+.sipping-success-sec .sipping-bottom-btn {
+    padding: 28px 0 10px;
+}
+
+span.shop_now_cta a {
+    padding: 10px 24px;
+}
+
+.reasons-to-believes-sec .sb-heading-text h1 {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -2px;
+    -webkit-text-stroke: 2px black;
+    text-align: center;
+    width: 98%;
+    margin: 0 auto;
+}
+
+.reasons-to-believes-sec .sb-title-text h6 {
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.reasons-to-believes-sec .shop_cta {
+    display: block;
+}
+  .reasons-to-believes-sec .new-one {
+    justify-content: center;
+}
+
+  .reasons-to-believes-sec .inner-shop-btn {
+    margin-top: 15px;
+}
+
+.reasons-to-believes-sec {
+    padding: 55px 15px 180px!important;
+}
+
+.main-footer-section {
+    padding: 49px 20px 0 20px;
+}
+
+  .communty-section h2 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    font-size: 28px;
+    line-height: 40px;
+    width: 100%;
+}
+
+  .communty-section {
+    padding: 0 0px;
+}
+  .join-input-wrapper {
+    flex-wrap: wrap;
+}
+
+.join-community-form {
+    margin-top: 10px;
+}
+
+.join-input-wrapper input[type=text] {
+    font-size: 12px;
+}
+
+.join-msg-box input::placeholder {
+    font-size: 12px;
+}
+
+section.ua_footer {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+section.ua_footer .ua_payment_system img {
+    width: 15%;
+}
+
+section.ua_footer .ua_payment_system {
+    margin-bottom: 30px;
+}
+
+section.ua_footer .shop-moodstates-section {
+    flex-wrap: wrap;
+}
+
+  section.ua_footer .shop-moodstates-section .footer-heading {
+    width: 50%;
+}
+
+.high-there-section .col-lg-7 {
+    width: 100%!important;
+}
+
+.header__icon .icon {
+    height: 3rem;
+    width: 3rem;
+}
+
+.header__heading-logo {
+    width: 68px;
+    height: 45px;
+}
+
+section.banner_mob_section {
+    padding: 70px 15px 40px!important;
+}
+
+section.banner_mob_section .ua_main_hd h1 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+section.as_seen_mob_sec {
+    padding: 34px 0 40px!important;
+}
+section.as_seen_mob_sec .owl-nav {
+    display: none;
+}
+
+section.review_sec .review_img img {
+    width: 100%;
+    height: 336px;
+    object-fit: cover;
+}
+
+section.review_sec .container {
+    max-width: 100%!important;
+}
+
+.review_slide .owl-nav button {
+    bottom: -4px!important;
+}
+
+.review_slide .owl-nav .owl-prev {
+    right: 193px!important;
+}
+
+.high-there-section {
+    background-image: url(https://cdn.shopify.com/s/files/1/0583/8189/3711/files/hi_there_mob.png?v=1711538016)!important;
+}
+
+.high-there-section .uncle_img:after {
+    left: 20px!important;
+    bottom: 20px!important;;
+}
+
+.product-title-text h6 {
+    font-size: 14px!important;
+    margin-bottom: 20px;
+}
+
+section.product-section .product_slider_outer {
+    margin-top: 30px!important;
+}
+
+.product-heading, .favorite_heading {
+    gap: 0px!important;
+}
+
+section.product-section .product_item_main .product_value_tag span.value_tag {
+    padding: 4px 4px;
+}
+
+section.product-section .product_img {
+    margin-top: -21px;
+}
+
+.baloon_wrapper img {
+    width: 80px!important;
+}
+
+section.reasons_to_believe .accordin_block_wrapper .accordion-body {
+    padding: 0 30px 10px 46px!important;
+}
+
+section.reasons_to_believe .container {
+    max-width: 100%!important;
+}
+
+section.reasons_to_believe .accordin_block_wrapper .accordion-button {
+    padding: 20px 0!important;
+}
+
+section.reasons_to_believe .reason_beileve_main_wrapper .accor_img_block {
+    padding: 40px 0px;
+}
+
+section.reasons_to_believe .shop_cta {
+    display: block!important;
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 90%;
+}
+
+section.reasons_to_believe {
+    position:relative;
+} 
+.Stories-section {
+    margin-top: 43px;
+}
+
+.stories .owl-nav button {
+    bottom: -25px!important;
+}
+
+.stories .owl-nav .owl-prev {
+    right: 202px!important;
+}
+.stories .owl-nav .owl-next {
+    right: 118px!important;
+}
+
+.Stories-review-box p {
+    color: #111;
+}
+
+.reasons-to-believes-sec .container {
+    max-width: 98%!important;
+}
+
+section.ua_footer .container {
+    max-width: 98%!important;
+}
+
+section.fruity-flavors-marque-sec {
+    padding:0px 0px!important;
+}
+
+.announcement-bar, .announcement-bar__announcement {
+    height: 25px;
+}
+
+section.review_sec .hand_col .hand_icon img {
+    height: 136px!important;
+    width: 136px!important;
+    object-fit: contain;
+}
+
+.review_info h6 {
+    margin-top: 20px;
+}
+
+.review_title h4 {
+    margin-top: 10px;
+}
+
+.Stories-review-box h2 {
+    letter-spacing: -1px;
+}
+
+section.fruity-flavors-marque-sec .fruity-flavors-box h5 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 0px;
+}
+
+section.fruity-flavors-marque-sec .fruity-flavors-box img {
+    width: 30px;
+    height: 30px;
+}
+
+section.fruity-flavors-marque-sec .fruity-flavors-box {
+    align-items: center;
+}
+
+.reasons-to-believes-sec .sb-heading-text h1 br {
+    display: none;
+}
+
+section.product-section .product_item_main .product_review_price_wrapper .product_review {
+    gap: 44px!important;
+}
+
+.reasons-to-believes-sec img.desktop-view {
+    display: none;
+}
+
+.reasons-to-believes-sec img.mobile-view {
+     display: block;
+}
+
+/* collection page css */
+
+  body.collection-page main#MainContent section.main.page-width .nav-col .nav-id .coll-info a {
+    justify-content: center;
+}
+  
+
+/* collection page css end */
+
+}
+

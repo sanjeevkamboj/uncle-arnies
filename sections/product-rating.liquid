@@ -1,0 +1,182 @@
+<section class="review_sec">
+    <div class="container">
+        <div class=" row review_main">
+
+            <div class="col-lg-1 hand_col">
+                <div class="hand_icon">
+                    <!-- <img src="Images/friends_forever.png" alt="hand_icon"> -->
+                    <img src="{{ section.settings.friend-img | img_url : 'master' }}" alt="hand_icon">
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                        <div class="owl-carousel owl-theme review_slide">
+
+                          {% for block in section.blocks %}
+                            <div class="item">
+                                <div class="review_main">
+                                    <div class="row">
+
+                                        <div class="col-lg-6 review_img">
+                                             <!-- <img src="Images/review_img.png" alt="review_img"> -->
+                                             <img src="{{ block.settings.review-img | img_url : 'master' }}" alt="review_img">
+                                        </div>
+
+                                        <div class="col-lg-6 review_slide_main">
+
+                                            <div class="review_star_block_main">
+                                                <div class="revw_rate_product_main">
+                                                <div class="review_rate">
+                                                    <span class="revw_star">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    </span>
+                                                    <!-- <span class="revw_rate">5.0</span> -->
+                                                    <span class="revw_rate">{{ block.settings.review-rate }}</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="review_title">
+                                                <!-- <h4>“Delicious, fresh and relaxing”</h4> -->
+                                                <h4>{{ block.settings.review-title }}</h4>
+                                             </div>
+                    
+                                             <div class="review_info">
+                                                <!-- <h6>Susan M.</h6> -->
+                                                 <h6>{{ block.settings.review-info }}</h6>
+                                             </div>
+                                            </div>
+                                       </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                            <!-- <div class="item">
+                                <div class="review_main">
+                                    <div class="row">
+
+                                        <div class="col-lg-6 review_img">
+                                             <img src="Images/review_img_1.png" alt="review_img">
+                                        </div>
+
+                                        <div class="col-lg-6 review_slide_main">
+
+                                            <div class="review_star_block_main">
+                                                <div class="revw_rate_product_main">
+                                                <div class="review_rate">
+                                                    <span class="revw_star">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    </span>
+                                                    <span class="revw_rate">
+                                                        5.0
+                                                    </span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="review_title">
+                                                <h4>“I just quit alcohol and this makes it easier”</h4>
+                                             </div>
+                    
+                                             <div class="review_info">
+                                                <h6>Susan M.</h6>
+                                             </div>
+                                            </div>
+                                       </div>
+
+                                    </div>
+
+                                </div>
+                            </div> -->
+
+
+                        </div>
+                        
+                    </div>
+
+                
+            </div>
+
+    </div>
+ 
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Product Rating Section",
+    "settings": [
+      {
+        "type" : "image_picker",
+        "id" : "friend-img",
+        "label" : "Select Image"
+      }
+    ],
+    "blocks" : [
+      {
+        "type" : "block",
+        "name" : "rating-block",
+        "settings" : [
+          {
+            "type" : "image_picker",
+            "id" : "review-img",
+            "label" : "Select Review Image"
+          },
+          {
+            "type" : "text",
+            "id" : "review-rate",
+            "label" : "Enter Review Rating"
+          },
+          {
+            "type" : "text",
+            "id" : "review-title",
+            "label" : "Enter Review Title"
+          },
+          {
+            "type" : "text",
+            "id" : "review-info",
+            "label" : "Enter Author Name"
+          }
+        ]
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Product Rating Section"
+      }
+    ]
+  }
+{% endschema %}
+
+
+<script>
+  $('.review_slide').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+
+$( ".review_slide .owl-prev").html('<img src=https://cdn.shopify.com/s/files/1/0687/5349/0178/files/left_icon_8dc35b90-39c5-493a-b9e2-0f263b75bc80.svg?v=1710843397>');
+ $( ".review_slide .owl-next").html('<img src=https://cdn.shopify.com/s/files/1/0687/5349/0178/files/right_icon_813bb7fd-57cd-47ec-a5c6-28eef5e09cd8.svg?v=1710843430>');
+</script>

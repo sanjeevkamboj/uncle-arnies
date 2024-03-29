@@ -1,0 +1,64 @@
+<section class="fruity-flavors-marque-sec">
+        <div class="fruity-flavors-marquee">
+            <div class="fruity-flavors-track">
+                <div class="fruity-flavors-content">
+                    <!-- <div class="fruity-flavors-box"> -->
+                  {% for block in section.blocks %}
+                    <!-- <img src="{{ block.settings.fruit-img | img_url : 'master' }}" alt="fruity_flavors"> -->
+                     <div class="fruity-flavors-box">
+                        <h5> {{ block.settings.fruit-heading }}</h5>
+                        <img class="lime-icon" alt="" src="{{ block.settings.fruit-img-one | img_url : 'master' }}">
+                        <img class="water-melon-icon" alt="" src="{{ block.settings.fruit-img-two | img_url : 'master' }}">
+                        <img class="lemon-icon" alt="" src="{{ block.settings.fruit-img-three | img_url : 'master' }}">
+                    </div>
+                  {% endfor %}
+                <!-- </div> -->
+            </div>
+        </div>
+   </div>
+</section>
+
+
+   
+
+{% schema %}
+  {
+    "name": "Fruit Slider Section",
+    "settings": [
+      
+    ],
+    "blocks" : [
+      {
+        "type" : "block",
+        "name" : "img-block",
+        "settings" : [
+          {
+            "type" : "text",
+            "id" : "fruit-heading",
+            "label" : "Enter Text "
+          },
+          {
+            "type" : "image_picker",
+            "id" : "fruit-img-one",
+            "label" : "Select Fruit Image"
+          },
+          {
+            "type" : "image_picker",
+            "id" : "fruit-img-two",
+            "label" : "Select Fruit Image"
+          },
+          {
+            "type" : "image_picker",
+            "id" : "fruit-img-three",
+            "label" : "Select Fruit Image"
+          }
+        ]
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Fruit Slider Section"
+      }
+    ]
+  }
+{% endschema %}

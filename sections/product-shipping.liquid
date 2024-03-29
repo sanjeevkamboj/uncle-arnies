@@ -1,0 +1,201 @@
+<section class="sipping-success-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="ss-heading">
+                        <div class="ss-title-text">
+                            <!-- <h6>Sipping success</h6> -->
+                            <h6>{{ section.settings.sub-heading }}</h6>
+                        </div>
+                        <div class="ss-heading-text">
+                            <!-- <h1>Stories from Our Happy Customers</h1> -->
+                            <h1>{{ section.settings.heading }}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel owl-theme stories">
+              {% for block in section.blocks %}
+                <div class="item">
+                    <div class="Stories-section">
+                        <div class="Stories-review-main">
+                            <div class="Stories-review-inner">
+                                <div class="Stories-product">
+                                    <!-- <img src="./images/stories-review-prosuxt-img.png"> -->
+                                    <img src="{{ block.settings.left-img | img_url : 'master' }}">
+                                </div>
+                                <div class="Stories-right-side">
+                                    <div class="Stories-top-box">
+                                        <div class="Stories-ratting-box">
+                                            <i class="fa-solid fa-star"></i>
+                                            <!-- <b>4.8</b> -->
+                                            <b>{{ block.settings.rate-num }}</b>
+                                        </div>
+                                        <div class="Stories-review-box">
+                                            <!-- <h2>Talk about relaxation!</h2>
+                                            <p>I fully enjoyed the experience. No overpowering cannabis taste and hit quicker than any other drink. </p> -->
+                                            <h2>{{ block.settings.rate-title }}</h2>
+                                            <p>{{ block.settings.rate-des }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="Stories-bottom-box">
+                                        <div class="Stories-review-info">
+                                            <!-- <b>Dennis P.</b> -->
+                                            <b>{{ block.settings.rate-name }}</b>
+                                            <div class="verify-box">
+                                                <!-- <img alt="" src="./images/verify-icon.svg">
+                                                <b>Verified Buyer</b> -->
+                                                <img alt="" src="{{ block.settings.badge-img | img_url : 'master' }}">
+                                                <b>{{ block.settings.rate-verified }}</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- <div class="item">
+                    <div class="Stories-section">
+                        <div class="Stories-review-main">
+                            <div class="Stories-review-inner">
+                                <div class="Stories-product">
+                                    <img src="./images/stories-review-prosuxt-img.png">
+                                </div>
+                                <div class="Stories-right-side">
+                                    <div class="Stories-top-box">
+                                        <div class="Stories-ratting-box">
+                                            <i class="fa-solid fa-star"></i>
+                                            <b>4.8</b>
+                                        </div>
+                                        <div class="Stories-review-box">
+                                            <h2>Talk about relaxation!</h2>
+                                            <p>I fully enjoyed the experience. No overpowering cannabis taste and hit quicker than any other drink. </p>
+                                        </div>
+                                    </div>
+                                    <div class="Stories-bottom-box">
+                                        <div class="Stories-review-info">
+                                            <b>Dennis P.</b>
+                                            <div class="verify-box">
+                                                <img alt="" src="./images/verify-icon.svg">
+                                                <b>Verified Buyer</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="sipping-bottom-btn">
+                <div class="shop_cta">
+                    <span class="shop_now_cta">
+                    <!-- <a href="#">shop now</a> -->
+                    <a href="{{ section.settings.btn-url }}">{{ section.settings.btn }}</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% schema %}
+  {
+    "name": "Product Shipping",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "sub-heading",
+        "label" : "Enter Sub Heading"
+      },
+      {
+        "type" : "text",
+        "id" : "heading",
+        "label" : "Enter Heading"
+      },
+      {
+        "type" : "text",
+        "id" : "btn",
+        "label" : "Enter Button Text"
+      },
+      {
+        "type" : "url",
+        "id" : "btn-url",
+        "label" : "Enter Button Url"
+      }
+    ],
+    "blocks" : [
+      {
+        "type" : "block",
+        "name" : "block",
+        "settings" : [
+          {
+            "type" : "image_picker",
+            "id" : "left-img",
+            "label" : "Select Image"
+          },
+          {
+            "type" : "text",
+            "id" : "rate-num",
+            "label" : "Enter Rating Number"
+          },
+          {
+            "type" : "text",
+            "id" : "rate-title",
+            "label" : "Enter Rating Title"
+          },
+          {
+            "type" : "text",
+            "id" : "rate-des",
+            "label" : "Enter Rating Description"
+          },
+          {
+            "type" : "text",
+            "id" : "rate-name",
+            "label" : "Enter Author Name"
+          },
+          {
+            "type" : "image_picker",
+            "id" : "badge-img",
+            "label" : "Select Image"
+          },
+          {
+            "type" : "text",
+            "id" : "rate-verified",
+            "label" : "Enter Text"
+          }
+        ]
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Product Shipping"
+      }
+    ]
+  }
+{% endschema %}
+
+
+<script>
+$('.stories').owlCarousel({
+    loop: true,
+    margin: 40,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$(".stories .owl-prev").html('<img src="https://cdn.shopify.com/s/files/1/0583/8189/3711/files/left_icon_c281ca85-417c-482a-8f13-84e7599af13c.svg?v=1710933907">');
+$(".stories .owl-next").html('<img src="https://cdn.shopify.com/s/files/1/0583/8189/3711/files/right_icon_629c8629-e617-4e45-8ae4-c88a4ff991fc.svg?v=1710933939">');
+</script>

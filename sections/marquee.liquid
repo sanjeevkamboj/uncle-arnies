@@ -1,0 +1,49 @@
+<section class="liq_frnd_marque_sec">
+    <div class="marquee">
+        <div class="track">
+          <div class="content">
+            {% for block in section.blocks %}
+              <img src="{{ block.settings.marque-img | img_url : "master" }}" alt="liquid_frnd">
+            {% endfor %}
+            <!-- <img src="Images/liq_frnd.png" alt="liquid_frnd">
+            <img src="Images/liq_frnd.png" alt="liquid_frnd">
+            <img src="Images/liq_frnd.png" alt="liquid_frnd">
+            <img src="Images/liq_frnd.png" alt="liquid_frnd">
+            <img src="Images/liq_frnd.png" alt="liquid_frnd">
+            <img src="Images/liq_frnd.png" alt="liquid_frnd">
+            <img src="Images/liq_frnd.png" alt="liquid_frnd">
+            <img src="Images/liq_frnd.png" alt="liquid_frnd"> -->
+        </div>
+        </div>
+      </div>
+</section>
+
+
+
+
+{% schema %}
+  {
+    "name": "Marquee Section",
+    "settings": [
+      
+    ],
+    "blocks" : [
+      {
+        "type" : "block",
+        "name" : "marque-img-block",
+        "settings" : [
+          {
+            "type" : "image_picker",
+            "id" : "marque-img",
+            "label" : "Select Image"
+          }
+        ]
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Marquee Section"
+      }
+    ]
+  }
+{% endschema %}

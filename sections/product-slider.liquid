@@ -1,0 +1,133 @@
+<section class="product-section">
+    <div class="product-heading">
+        <div class="product-title-text">
+            <!-- <h6>the favorites</h6> -->
+            <h6>{{ section.settings.title-text }}</h6>
+        </div>
+        <div class="heading-text">
+            <!-- <h2>AN EASY-DRINKING TRIP WITH EVERY SIP</h2> -->
+            <h2>{{ section.settings.heading-text }}</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="product_slider_outer">
+                    <div class="owl-carousel owl-theme product_slider">
+
+                        <!-- item 1 -->
+
+                      {% assign collection = collections[section.settings.slider-collection] %}
+                      {% for product in collection.products %}
+                        <div class="item">
+                            <div class="product_item_main">
+                              <a href="{{ product.url }}">
+                                <div class="product_value_tag">
+                                 {% comment %} {% for tag in product.tags %}
+                                    {% if tag contains 'BEST VALUED' %}
+                                      <!-- <span class="value_tag">BEST VALUED</span> -->
+                                      <span class="value_tag">{{ tag }}</span>
+                                    {% endif %}
+                                  {% endfor %} {% endcomment %}
+
+                                  {% assign trendy_tag-one = '🔥 Trendy Now' %}
+                                  {% assign tags = product.metafields.custom.product_tag_name | split: ',' %}
+                
+                                  {% assign trendy_tag-two = '😌 5 MG' %}
+                                  {% assign tags = product.metafields.custom.product_tag_name | split: ',' %}
+                
+                                
+                                  {% if tags contains trendy_tag-one %}
+                                    <div class="main-tag trendy"><h5>{{ product.metafields.custom.product_tag_name }}</h5></div>
+                                  {% else tags contains trendy_tag-two %}
+                                    <div class="main-tag five-mg"><h5>{{ product.metafields.custom.product_tag_name }}</h5></div>
+                                  {% endif %}
+                                  
+                                </div>
+                                <div class="product_title">
+                                    <!-- <h4>Cherry limeade</h4> -->
+                                    <h4>{{ product.title }}</h4>
+                                </div>
+                                <div class="product_value_tag">
+                                  {% for tag in product.tags %}
+                                    {% if tag contains '10mg thc' %}
+                                      <span class="weight_tag">{{ tag }}</span>
+                                      <!-- <span class="weight_tag">10mg thc</span> -->
+                                    {% endif %}
+                                  {% endfor %}
+                                </div>
+                                <div class="product_img">
+                                    <!-- <img src="Images/cherry_lime.png"> -->
+                                    <img src="{{ product.featured_image | img_url : 'master' }}">
+                                </div>
+                              </a>
+
+                                <div class="product_review_price_wrapper">
+                                  <div class="product_review">
+                                    <div class="star_rating">
+
+                                      <!-- ========== Yotopo App Reviews App Rating Code ========== -->
+                                     <a href="{{ product.url }}">
+                                        <div class="yotpo bottomLine"
+                                            data-product-id="{{ product.id }}"
+                                            data-url="{{ product.url }}">
+                                          {{reviews_count}} Reviews
+                                        </div>
+                                      </a>
+                                      <!-- ========== Yotopo App Reviews App Rating Code ========== -->
+                                      
+                                    </div>
+                                    <div class="product_plus">
+                                        <i class="fa-solid fa-plus add-cart" pro-id={{ product.selected_or_first_available_variant.id }}></i>
+                                    </div>
+                                      
+                                  </div>
+                                    
+                                  <div class="product_price">
+                                    <span class="regular_price">{{ product.compare_at_price | money }}</span>
+                                    <span class="sale_price">{{ product.price | money }}</span>
+                                  </div>
+                                </div>
+
+                            <!-- </a> -->
+                        </div>
+                        </div>
+                      {% endfor %}
+
+                      
+                </div>
+              </div>
+            </div>
+
+          </div>
+      
+    </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Product Slider Section",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "title-text",
+        "label" : "Enter Sub Title"
+      },
+      {
+        "type" : "text",
+        "id" : "heading-text",
+        "label" : "Enter Title"
+      },
+      {
+        "type" : "collection",
+        "id" : "slider-collection",
+        "label" : "Select Collection"
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Product Slider Section"
+      }
+    ]
+  }
+{% endschema %}

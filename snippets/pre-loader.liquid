@@ -1,0 +1,33 @@
+<link rel="preload" href="https://cdn.shopify.com/s/files/1/0583/8189/3711/files/1495.gif?v=1711695462" as="image" />
+<div id="preloader">
+  <img src="https://cdn.shopify.com/s/files/1/0583/8189/3711/files/9tsWVyt4Qy.gif?v=1711696928" alt="Preloader">
+</div>
+<style>
+  #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #25b6e9;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preloader img {
+  max-width: 100px;
+  max-height: 100px;
+}
+ #preloader img{
+   width:250px;
+ }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  var preloader = document.getElementById("preloader");
+  preloader.style.display = "none";
+});
+</script>

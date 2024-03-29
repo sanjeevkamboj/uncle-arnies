@@ -1,0 +1,140 @@
+  <section class="favourite_section">
+        <div class="favorite_heading">
+            <div class="sub-title-text">
+                <!-- <h6>the favorites</h6> -->
+                <h6>{{ section.settings.sub-heading }}</h6>
+            </div>
+            <div class="heading-text">
+                <!-- <h2>Save your problems for another day</h2> -->
+                <h2>{{ section.settings.heading }}</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row free_del">
+
+              {% for block in section.blocks %}
+
+                <div class="col-lg-4 satisfac_col first_eql">
+                    <div class="staisfaction_icn">
+                        <!-- <img src="Images/SATISFACTION _CON.png" alt="staisfaction_icon"> -->
+                        <img src="{{ block.settings.item-image | img_url : 'master' }}" alt="staisfaction_icon">
+                    </div>
+
+                    <div class="free_delivery_wrapper">
+                        <!-- <h6>Free Delivery on all orders $50+</h6> -->
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur alaborum.</p> -->
+                        <h6>{{ block.settings.item-heading }}</h6>
+                        <p>{{ block.settings.item-desc }}</p>
+                    </div>
+
+                </div>
+                {% endfor %}
+
+
+                    <div class="baloon_wrapper">
+                      <!-- <img src="Images/Baloon.png" alt="baloon"> -->
+                      <img src="{{ section.settings.uncle-image | img_url : 'master' }}" alt="baloon">
+                    </div>
+
+
+                <!-- <div class="col-lg-4 satisfac_col second_eql">
+                    <div class="staisfaction_icn">
+                        <img src="Images/SATISFACTION _CON.png" alt="staisfaction_icon">
+                    </div>
+
+                    <div class="free_delivery_wrapper">
+                        <h6>Free Delivery on all orders $50+</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur alaborum.</p>
+
+                    </div>
+
+                </div> -->
+
+                <!-- <div class="col-lg-4 satisfac_col">
+                    <div class="staisfaction_icn">
+                        <img src="Images/SATISFACTION _CON.png" alt="staisfaction_icon">
+                    </div>
+
+                    <div class="free_delivery_wrapper">
+                        <h6>Free Delivery on all orders $50+</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur alaborum.</p>
+
+                    </div>
+
+                    <div class="baloon_wrapper">
+                        <img src="Images/Baloon.png" alt="baloon">
+                    </div>
+
+                </div> -->
+
+                <!-- <div class="col-lg-4 satisfac_col last_eql">
+                    <div class="staisfaction_icn">
+                        <img src="Images/SATISFACTION _CON.png" alt="staisfaction_icon">
+                    </div>
+
+                    <div class="free_delivery_wrapper">
+                        <h6>Free Delivery on all orders $50+</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur alaborum.</p>
+
+                    </div>
+
+                </div> -->
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+{% schema %}
+  {
+    "name": "Section Favourite",
+    "settings": [
+      {
+        "type": "text",
+        "id": "sub-heading",
+        "label": "Enter Sub Heading"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Enter Heading"
+      },
+      {
+            "type": "image_picker",
+            "id" : "uncle-image",
+            "label": "Select Image"
+          }
+    ],
+    "blocks": [
+      {
+        "type": "item-block",
+        "name": "item-block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id" : "item-image",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id" : "item-heading",
+            "label": "Enter Item Heading"
+          },
+          {
+            "type": "text",
+            "id": "item-desc",
+            "label": "Enter Item Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Section Favourite"
+      }
+    ]
+  }
+{% endschema %}

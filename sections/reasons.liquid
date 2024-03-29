@@ -1,0 +1,77 @@
+<section class="reasons-to-believes-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="sb-heading">
+                        <div class="sb-title-text">
+                            <!-- <h6>reasons to believe</h6> -->
+                            <h6>{{ section.settings.subs }}</h6>
+                        </div>
+                        <div class="sb-heading-text">
+                            <!-- <h1>Save your problems for another day</h1> -->
+                            <h1>{{ section.settings.title }}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 new-one">
+                    <div class="inner-shop-btn">
+                        <span class="shop-now-btn">
+                            <div class="shop_cta">
+                                <span class="shop_now_cta">
+                                <!-- <a href="#">shop now</a> -->
+                                  <a href="{{ section.settings.btn-url }}">{{ section.settings.shop }}</a>
+                                </span>
+                    </div>
+                    </span>
+                </div>
+            </div>
+            <!-- <img src="images/image-127-1@2x.png"> -->
+            <img class="desktop-view" src="{{ section.settings.two-img | img_url : 'master' }}">
+            <img class="mobile-view" src="{{ section.settings.second-img | img_url : 'master' }}">
+        </div>
+        </div>
+    </section>
+
+
+{% schema %}
+  {
+    "name": "Believe Section",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "subs",
+        "label" : "Enter Sub Title"
+      },
+      {
+        "type" : "text",
+        "id" : "title",
+        "label" : "Enter Title"
+      },
+      {
+        "type" : "text",
+        "id" : "shop",
+        "label" : "Enter Button Text"
+      },
+      {
+        "type" : "url",
+        "id" : "btn-url",
+        "label" : "Enter Button Url"
+      },
+      {
+        "type" : "image_picker",
+        "id" : "two-img",
+        "label" : "Select Image"
+      },
+      {
+        "type" : "image_picker",
+        "id" : "second-img",
+        "label" : "Select Image for Mobile View"
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Believe Section"
+      }
+    ]
+  }
+{% endschema %}

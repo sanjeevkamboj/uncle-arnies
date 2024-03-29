@@ -1,0 +1,62 @@
+<section class="main-footer-section ">
+        <div class="contact-form-box">
+            <div class="contact-form-inner">
+                <div class="communty-section">
+                    <div class="communty-heading">
+                        <!-- <img src="images/uncle-join-logo.png"> -->
+                        <!-- <b>JOIN THE COMMUNITY</b> -->
+                        <img src="{{ section.settings.contact-img | img_url : 'master' }}">
+                        <b>{{ section.settings.sub-heading }}</b>
+                    </div>
+                    <!-- <h2>ALL ABOARD UNCLE ARNIE’S MAGIC BUS </h2> -->
+                    <h2>{{ section.settings.heading }}</h2>
+                </div>
+                <form method="post" action="#" class="join-community-form">
+                    <div class="inner-join-form">
+                        <div class="join-input-wrapper">
+                            <input type="text" placeholder="first name">
+                            <input type="text" placeholder="last name">
+                        </div>
+                        <div class="join-msg-box">
+                            <input type="text" placeholder="message ">
+                        </div>
+                    </div>
+                    <div class="join-now-btn">
+                      <button type="button" class="btn-join" value="join">JOIN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom "></div>
+    </section>
+
+
+
+
+{% schema %}
+  {
+    "name": "Contact Section",
+    "settings": [
+      {
+        "type" : "image_picker",
+        "id" : "contact-img",
+        "label" : "Select Image"
+      },
+      {
+        "type" : "text",
+        "id" : "sub-heading",
+        "label" : "Enter Sub Heading"
+      },
+      {
+        "type" : "text",
+        "id" : "heading",
+        "label" : "Enter Heading"
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Contact Section"
+      }
+    ]
+  }
+{% endschema %}
